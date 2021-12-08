@@ -15,8 +15,8 @@ This project uses HTML and SASS which will be compiled down to CSS (if you follo
 Clone the GitHub repository or Fork it, and start working righ away with it.
 
 ```
-git clone https://github.com/tyrellbain/nothingspecial.git
-cd nothingspecial
+git clone https://github.com/carsonbuchan/PearlX.git
+cd pearlx
 npm i
 ```
 
