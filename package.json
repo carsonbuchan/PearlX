@@ -1,0 +1,29 @@
+{
+  "name": "PearlX",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all -p watch-css server",
+    "server": "cd src &&  http-server -c-1",
+    "build-css": "node-sass src/styles -o src/css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carsonbuchan/PearlX.git"
+  },
+  "author": "Tyrell Bain, Carson Buchan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyrellbain/PearlX/issues"
+  },
+  "homepage": "https://github.com/tyrellbain/PearlX#readme",
+  "devDependencies": {
+    "copy-webpack-plugin": "^9.0.1",
+    "http-server": "^13.0.1",
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12",
+    "npm-run-all": "^4.1.5"
+  }
+}
