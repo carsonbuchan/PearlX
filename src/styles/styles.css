@@ -66,7 +66,7 @@ html, body{
 }
 .cardPic{
     height: auto;
-    width: 50vw;
+    width: 100%;
 }
 .picSlotLeft{
     grid-column: 1;
@@ -88,4 +88,20 @@ html, body{
     margin-top: 100px;
     margin-bottom: 100px;
     color: #3E2FA1;
+}
+
+.bottom{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-image: url("../images/stand.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150vh;
+}
+.textHolder{
+    grid-column: 2 /span 3;
+    grid-row: 4;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
 }
