@@ -29,9 +29,63 @@ html, body{
     align-items: center;
     justify-content: center;
 }
+.mainText{
+    color: #fff;
+    padding-left: 100px;
+    padding-right: 100px;
+}
 .topText{
     font-size: 165px;
     margin-top: 0;
-    color: #fff;
     text-align: center;
+}
+
+/* Second Section */
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.leftText{
+    grid-column: 1;
+    background-color: #3E2FA1;
+}
+.textTitle{
+    font-size: 100px;
+}
+.cardMidText{
+    font-size: 45px;
+}
+.cardBotText{
+    font-size: 33px;
+    margin-bottom: 100px;
+}
+.picSlot{
+    grid-column: 2;
+    background-color: #000;
+}
+.cardPic{
+    height: auto;
+    width: 50vw;
+}
+.picSlotLeft{
+    grid-column: 1;
+    background-color: #000;
+}
+.rightText{
+    grid-column: 2;
+    background-color: #3E2FA1;
+}
+
+.divider{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.dividerText{
+    grid-column: 1 / span 3;
+    text-align: center;
+    font-size: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color: #3E2FA1;
 }
