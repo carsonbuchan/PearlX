@@ -1,0 +1,37 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    position: fixed;
+    margin-top: 45px;
+    margin-left: 57px;
+}
+
+.fixed{
+    width: 250px;
+    height: auto;
+}
+
+.topHero{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-image: url("../images/group.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: auto;
+}
+
+.textHolder{
+    grid-column: 2 /span 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.topText{
+    font-size: 165px;
+    margin-top: 0;
+    color: #fff;
+    text-align: center;
+}
