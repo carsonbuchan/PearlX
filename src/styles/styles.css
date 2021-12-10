@@ -2,6 +2,23 @@ html, body{
     margin: 0;
     padding: 0;
 }
+@font-face {
+    font-family: "GT America Standard Light";
+    src: url("../assets/GT-America-Standard-Light-Trial.woff2") format("woff");
+}
+@font-face {
+    font-family: "GT Super Display Bold";
+    src: url("../assets/GT-Super-Display-Bold.woff") format("woff");
+}
+@font-face {
+    font-family: "GT Super Text Book";
+    src: url("../assets/GT-Super-Text-Book.woff2") format("woff");
+}
+@font-face {
+    font-family: "GT Super Text Bold";
+    src: url("../assets/GT-Super-Text-Bold.woff2") format("woff");
+}
+
 .logo{
     position: fixed;
     margin-top: 45px;
@@ -29,10 +46,17 @@ html, body{
     align-items: center;
     justify-content: center;
 }
+.headerText{
+    color: #fff;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-family:"GT Super Display Bold";
+}
 .mainText{
     color: #fff;
     padding-left: 100px;
     padding-right: 100px;
+    font-family:"GT America Standard Light";
 }
 .topText{
     font-size: 165px;
@@ -40,7 +64,23 @@ html, body{
     text-align: center;
 }
 
-/* Second Section */
+.blueText{
+    display: flex;
+    
+}
+.blueX{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.restart{
+    text-align: center;
+    font-size: 100px;
+    color: #3E2FA1;
+    font-family: "GT America Standard Light";
+}
+/*------------------- Second Section -------------------*/
 
 .cards{
     display: grid;
@@ -62,11 +102,70 @@ html, body{
 }
 .picSlot{
     grid-column: 2;
-    background-color: #000;
+    background-image: url(../images/button.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+.picSlotLeft{
+    grid-column: 2;
+    background-image: url(../images/drill.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picSlotBot{
+    grid-column: 2;
+    background-image: url(../images/cable.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Card image slide */
 .cardPic{
+    opacity: 0;
     height: auto;
     width: 100%;
+    -webkit-transform: translateX(-40px);
+			 -moz-transform: translateX(-40px);
+				-ms-transform: translateX(-40px);
+				 -o-transform: translateX(-40px);
+						transform: translateX(-40px);
+		-webkit-transition: all 0.6s ease-out;
+			 -moz-transition: all 0.6s ease-out;
+				-ms-transition: all 0.6s ease-out;
+				 -o-transition: all 0.6s ease-out;
+						transition: all 0.6s ease-out;
+}
+.cardPic.visible{
+    opacity: 1;
+		-webkit-transform: none;
+			 -moz-transform: none;
+				-ms-transform: none;
+				 -o-transform: none;
+						transform: none;
+}
+
+.cardPicLeft{
+    opacity: 0;
+    height: auto;
+    width: 100%;
+    -webkit-transform: translateX(40px);
+			 -moz-transform: translateX(40px);
+				-ms-transform: translateX(40px);
+				 -o-transform: translateX(40px);
+						transform: translateX(40px);
+		-webkit-transition: all 0.6s ease-out;
+			 -moz-transition: all 0.6s ease-out;
+				-ms-transition: all 0.6s ease-out;
+				 -o-transition: all 0.6s ease-out;
+						transition: all 0.6s ease-out;
+}
+.cardPicLeft.visible{
+    opacity: 1;
+		-webkit-transform: none;
+			 -moz-transform: none;
+				-ms-transform: none;
+				 -o-transform: none;
+						transform: none;
+
 }
 .picSlotLeft{
     grid-column: 1;
@@ -77,6 +176,7 @@ html, body{
     background-color: #3E2FA1;
 }
 
+/*------------------- Bottom Section -------------------*/
 .divider{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -88,6 +188,7 @@ html, body{
     margin-top: 100px;
     margin-bottom: 100px;
     color: #3E2FA1;
+    font-family: "GT America Standard Light";
 }
 
 .bottom{
@@ -104,4 +205,18 @@ html, body{
     font-size: 40px;
     color: #fff;
     text-align: center;
+}
+
+.bottomHero{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-image: url("../images/textWall.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: auto;
+}
+.portraitX{
+    width: 99vw;
+    height: auto;
 }

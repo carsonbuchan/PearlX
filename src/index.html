@@ -12,29 +12,42 @@
     <meta property="og:title" content="PearlX" />
 
     <link rel="stylesheet" href="styles/styles.css" />
-    <script src="../js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js" integrity="sha512-RvUydNGlqYJapy0t4AH8hDv/It+zKsv4wOQGb+iOnEfa6NnF2fzjXgRy+FDjSpMfC3sjokNUzsfYZaZ8QAwIxg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/modal.js"></script>
   </head>
 
   <body class="bg">
     <main class="container wrapper">
       <!-- Add your site or application content here -->
-      <!-- logo -->
+      <!--------------------- logo --------------------->
       <div class="logo">
         <a class="fixed" href="index.html">
             <img src="images/logo.png">
         </a>
       </div>
-      <!-- First Section -->
+      <!--------------------- First Section --------------------->
       <div class="topHero">
+        <div class="holder" id="trigger1"></div>
         <div class="textHolder">
-            <h1 class="topText mainText">
+            <h1 class="topText headerText">
                 The furutre ended here
             </h1>
         </div>
       </div>
+      <div class="blueXText">
+          <div class="blueX">
+              <img src="images/blueX.png">
+          </div>
+          <h1 class="restart" id="pin1">
+              AND IT RESTARTS WITH YOU
+          </h1>
+      </div>
       <!-- Crazy Parralaxing -->
-      <!-- Second Section -->
-      <!-- First Card -->
+      <!--------------------- Second Section --------------------->
+      <!-------------------- First Card --------------------->
       <div class="cards">
         <div class="leftText">
             <h1 class="textTitle mainText">
@@ -56,14 +69,14 @@
                 more democratic energy future.
             </p>
         </div>
-        <div class="picSlot">
-            <img class="cardPic" src="images/button.png">
+        <div class="picSlot" id="overlay">
+            <img class="cardPic" src="images/cover1.png" alt="cover">
         </div>
       </div>
-      <!-- Second Card -->
+      <!--------------------- Second Card --------------------->
       <div class="cards">
         <div class="picSlotLeft">
-            <img class="cardPic" src="images/drill.png">
+            <img class="cardPicLeft" src="images/cover2.png" alt="cover">
         </div>
         <div class="rightText">
             <h1 class="textTitle mainText">
@@ -82,7 +95,7 @@
             </p>
         </div>
     </div>
-    <!-- Third Card -->
+    <!--------------------- Third Card --------------------->
     <div class="cards">
         <div class="leftText">
             <h1 class="textTitle mainText">
@@ -102,22 +115,28 @@
                 social wellness.
             </p>
         </div>
-        <div class="picSlot">
-            <img class="cardPic" src="images/button.png">
+        <div class="picSlotBot">
+            <img class="cardPic" src="images/cover3.png" alt="cover">
         </div>
     </div>
-    <!-- Welcome to the city -->
+    <!--------------------- Bottom Divider --------------------->
     <div class="divider">
         <h1 class="dividerText">
             WELCOME TO THE CITY OF THE FUTURE. AN INDEPENDENT CITY.
         </h1>
     </div>
-    <!-- Bottom Section -->
+    <!--------------------- Bottom Section --------------------->
     <div class="bottom">
         <div class="textHolder">
-        <h1 class="bottomText">
-            YOUR CITY. YOUR HILL.
-        </h1>
+            <h1 class="bottomText">
+                YOUR CITY. YOUR HILL.
+            </h1>
+        </div>
+    </div>
+    <!--------------------- Bottom Parallaxing --------------------->
+    <div class="bottomHero">
+        <div>
+            <img src="images/whiteX.png" class="portraitX">
         </div>
     </div>
     </main>
