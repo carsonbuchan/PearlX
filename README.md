@@ -2,13 +2,9 @@
 
 # Table of Contents
 
-- [Into](#intro)
 - [Install](#installation)
 - [Usage](#usage)
 
-## Intro
-
-This project uses HTML and SASS which will be compiled down to CSS (if you follow the usage commands). No CSS should be directly written. It will be written via SASS then compiled and referenced from the `css/` folder
 
 ## Installation
 
