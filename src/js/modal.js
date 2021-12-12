@@ -33,9 +33,11 @@ var revealElements = document.getElementsByClassName("cardPic");
 
 		// $(document).scroll(function(){
 		// 	var scrollTop = $(".bottomHero").scrollTop();
-		// 	if(scrollTop > 150){
+		// 	if(scrollTop > 400){
 		// 		$(".bottomHeroTrans").fadeIn();
 		// 	}
 		// 	else
 		// 		$(".bottomHeroTrans").fadeOut();
 		// })
+
+		
