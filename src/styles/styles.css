@@ -127,7 +127,10 @@ html, body{
     background-image: url(../videos/drill.gif);
     background-repeat: no-repeat;
     background-color: black;
-    background-size: contain;
+    background-size: cover;
+}
+.drillHolder{
+    
 }
 .picSlotBot{
     background-image: url(../videos/cable.gif);
