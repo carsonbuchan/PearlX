@@ -459,3 +459,58 @@ svg text {
         padding-top: 1.37rem;
     }
 }
+@media only screen and (max-width: 480px){
+    main{
+        overflow: hidden;
+    }
+    .heroImage .textHolder{
+        max-width: 300px;
+    }
+    .logo{
+
+    }
+    .blueText{
+        transform: translate(-50%, 10%);
+    }
+    .visible{
+        display: none;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+    
+    .leftText{
+        grid-column: 1;
+    }
+    .cardMidText{
+        font-size: 18px;
+    }
+    .cardBotText{
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+    .picSlot{
+        grid-column: 1;
+        width: 100vw;
+        background-size: cover;
+    }
+    .picSlotLeft{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .cardPicLeft{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .rightText{
+        grid-column: 1;
+    }
+    .bottomText{
+        text-align: center;
+    }
+    .bottomHero{
+        height: 700px;
+    }
+}

@@ -7,6 +7,10 @@
                     header.removeClass('bottomHero').addClass("bottomHeroTrans");
                     $(".portraitX").attr("src","../images/childX.png");
                 } 
+                else{
+                    
+                    $(".portraitX").attr("src","../images/manX.png")
+                }
             });
         });
         
