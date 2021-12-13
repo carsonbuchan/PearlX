@@ -76,11 +76,11 @@ html, body{
     justify-content: center;
 }
 
-
+.heroPic{
+    
+}
 .headerText{
     color: #fff;
-    padding-left: 100px;
-    padding-right: 100px;
     font-family:"GT Super Display Bold";
 }
 .mainText{
@@ -117,7 +117,7 @@ html, body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 700px;
+    max-width: 800px;
 }
 
 .blueX{
