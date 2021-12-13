@@ -30,22 +30,22 @@ tl.add(
 
 tl.add(
 	TweenMax.to(".blueX svg", 1, {opacity: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
-	"-=1"
+	"-=0.3"
 );
 
 tl.add(
 	TweenMax.to(".heroImage .heroImageContainer", 1, {opacity: 0, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
-	"-=1"
+	"-=0.3"
 );
 
 tl.add(
 	TweenMax.to(".blueX svg text", 1, {scale: 0.1, transformOrigin: "50%, 47%", ease:Power2.easeInOut}),
-	"-=1"
+	"-=0.3"
 );
 
 tl.add(
 	TweenMax.to(".blueText", 1, {opacity: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
-	"+=1"
+	"+=0.3"
 );
 
 // const controller = new ScrollMagic.Controller();
@@ -56,7 +56,7 @@ var startpin = new ScrollMagic.Scene({
 .addTo(controller);
 
 new ScrollMagic.Scene({
-	duration: 500
+	duration: 800
 })
 .setTween(tl)
 .addTo(controller);

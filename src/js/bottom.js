@@ -9,7 +9,7 @@
                 } 
                 else{
                     
-                    $(".portraitX").attr("src","../images/manX.png")
+                    $(".portraitX").attr("src","../images/manX.png");
                 }
             });
         });
