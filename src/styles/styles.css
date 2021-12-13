@@ -380,11 +380,10 @@ svg text {
         grid-column: 1 /span 5;
         align-items: center;
         padding-bottom: 50px;
+        font-size: 30px;
     }
     .headerText{
         color: #fff;
-        padding-left: 100px;
-        padding-right: 100px;
         font-family:"GT Super Display Bold";
     }
     .titleText{
