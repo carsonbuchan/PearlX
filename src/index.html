@@ -30,10 +30,9 @@
       </div>
       <!--------------------- First Section --------------------->
       <div class="topHero">
-        <div class="holder" id="trigger1"></div>
         <div class="textHolder">
-            <h1 class="topText headerText">
-                The furutre ended here
+            <h1 class="titleText headerText">
+                The future ended here
             </h1>
         </div>
       </div>
@@ -41,7 +40,7 @@
           <div class="blueX">
               <img src="images/blueX.png">
           </div>
-          <h1 class="restart" id="pin1">
+          <h1 class="restart">
               AND IT RESTARTS WITH YOU
           </h1>
       </div>
@@ -69,13 +68,14 @@
                 more democratic energy future.
             </p>
         </div>
-        <div class="picSlot" id="overlay">
+        <div class="picSlot">
             <img class="cardPic" src="images/cover1.png" alt="cover">
         </div>
       </div>
       <!--------------------- Second Card --------------------->
       <div class="cards">
         <div class="picSlotLeft">
+            <div class="drillHolder"></div>
             <img class="cardPicLeft" src="images/cover2.png" alt="cover">
         </div>
         <div class="rightText">
@@ -134,12 +134,20 @@
         </div>
     </div>
     <!--------------------- Bottom Parallaxing --------------------->
-    <div class="bottomHero">
-        <div>
-            <img src="images/whiteX.png" class="portraitX">
+    <div id="heroContainer">
+        <div class="bottomHero">
+            <div class="sticky">
+                <img src="images/manX.png" class="portraitX">  
+            </div>          
         </div>
+        <!-- <div class="bottomHeroTrans">
+            <div class="sticky">
+                <img src="images/childX.png" class="portraitChildX">
+            </div>
+        </div> -->
     </div>
     </main>
     <script src="js/modal.js"></script>
+    <script src="js/bottom.js"></script>
   </body>
 </html>
