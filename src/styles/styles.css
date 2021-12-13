@@ -36,7 +36,9 @@ html, body{
     margin-left: 57px;
     z-index: 3000;
 }
-
+.main{
+    max-width: 2000px;
+}
 .fixed{
     width: 250px;
     height: auto;
@@ -55,10 +57,15 @@ html, body{
 
 .textHolder{
     grid-column: 2 /span 3;
+    grid-row: 4;
     display: flex;
+    font-size: 40px;
+    color: #fff;
     align-items: center;
     justify-content: center;
 }
+
+
 .headerText{
     color: #fff;
     padding-left: 100px;
@@ -227,13 +234,6 @@ html, body{
     background-size: cover;
     height: 150vh;
 }
-.textHolder{
-    grid-column: 2 /span 3;
-    grid-row: 4;
-    font-size: 40px;
-    color: #fff;
-    text-align: center;
-}
 
 .bottomHero{
     opacity: 1;
@@ -241,7 +241,7 @@ html, body{
     background-repeat: no-repeat;
     height: 3674px;
     width: 100%;
-    background-size: cover;
+    background-size: contain;
     transition: all 0.5s;
 }
 .bottomHeroTrans{
@@ -250,7 +250,7 @@ html, body{
     background-repeat: no-repeat;
     height: 3674px;
     width: auto;
-    background-size: cover;
+    background-size: contain;
     transition: all 0.5s;
 }
 .portraitX{
@@ -276,12 +276,12 @@ html, body{
     background-size: cover;
 } */
 
-
 /* ---------------------- MEDIA QUERIES ---------------------- */
 @media only screen and (max-width: 1024px){
     .textHolder{
         grid-column: 1 /span 5;
-        grid-row: auto;
+        align-items: center;
+        padding-bottom: 50px;
     }
     .headerText{
         color: #fff;
@@ -313,5 +313,23 @@ html, body{
     }
     .dividerText{
         font-size: 60px;
+    }
+    .bottomHero{
+        opacity: 1;
+        background-image: url("../images/textWallChange.png");
+        background-repeat: no-repeat;
+        height: 1950px;
+        width: auto;
+        background-size: contain;
+        transition: all 0.5s;
+    }
+    .bottomHeroTrans{
+        opacity: 1;
+        background-image: url("../images/textWallChange.png");
+        background-repeat: no-repeat;
+        height: 1950px;
+        width: auto;
+        background-size: contain;
+        transition: all 0.5s;
     }
 }
