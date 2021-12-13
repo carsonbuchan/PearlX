@@ -26,6 +26,12 @@ html, body{
     font-family: "Big Noodle Tilting Oblique";
     src: url("../assets/big_noodle_titling_oblique.ttf") format("truetype");
 }
+
+@font-face {
+    font-family: "Days Sans Black";
+    src: url("../assets/days_sans_black.otf") format("opentype");
+}
+
 .body{
     background-color: #fff;
     transition: all 1s ease-in;
@@ -48,12 +54,17 @@ html, body{
 .topHero{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    background-image: url("../images/group.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    width: auto;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
 }
+
+/* .topHero .heroImage {
+    max-width: 100%;
+} */
 
 .textHolder{
     grid-column: 2 /span 3;
@@ -86,15 +97,102 @@ html, body{
 }
 
 .blueText{
-    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 25%);
+    z-index: 10;
+    opacity: 0;
+}
+
+.heroImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heroImage .textHolder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 700px;
+}
+
+.blueX{
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.blueX svg {
+    /* position: absolute;
+    top: -50%;
+    left: 0; */
+    /* width: 200%;
+    height: 200%; */
+    position: relative;
+    transform-origin: center center;
+}
+
+svg {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+	display: block;
+    opacity: 0;
+}
+
+svg path {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.blueX svg text {
+    text-anchor: middle;
+    font-size: 300em;
+    /* line-height: 1; */
+    transform: translateY(-233%);
+    font-family: "Days Sans Black";
     
 }
-.blueX{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
+
+.blueX svg mask rect {
+/*   fill: rgba(255, 255, 255, 0.8); */
+  fill: white;
+  width: 100%;
+  height: 100%;
 }
+
+.blueX svg > rect {
+    fill: white;
+    -webkit-mask: url(#mask);
+    mask: url(#mask);
+    width: 100%;
+    height: 100%;
+}
+
+/* .blueX svg mask rect {
+      fill: white;
+    }
+
+.blueX svg > rect {
+    fill: white;
+    -webkit-mask: url(#mask);
+    mask: url(#mask);
+}
+
+svg text {
+    text-anchor: middle;
+} */
+
 .restart{
     text-align: center;
     font-size: 100px;
