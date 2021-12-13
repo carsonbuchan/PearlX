@@ -266,7 +266,7 @@ svg text {
 .cardPic{
     opacity: 0;
     height: auto;
-    width: 100%;
+    width: 98%;
     -webkit-transform: translateX(-120px);
 			 -moz-transform: translateX(-120px);
 				-ms-transform: translateX(-120px);
@@ -410,15 +410,13 @@ svg text {
     .restart{
         font-size: 70px;
     }
-    .textTitle{
-        font-size: 35px;
-    }
+    
     .mainText{
         padding-left: 50px;
         padding-right: 50px;
     }
     .cardMidText{
-        font-size: 25px;
+        font-size: 30px;
     }
     .cardBotText{
         font-size: 20px;
@@ -452,14 +450,35 @@ svg text {
     .cardPicLeft{
         padding-top: 5rem;
     }
+    .cardPic{
+        width: 100%;
+    }
     .cardPicLeft.visible{
+        width: 100%;
         padding-top: 5rem;
     }
     .animateWrapper{
         padding-top: 1.37rem;
     }
 }
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 1300px){
+    .textTitle{
+        font-size: 35px;
+    }
+    .mainText{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .cardMidText{
+        font-size: 25px;
+    }
+    .cardBotText{
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+}
+
+@media only screen and (max-width: 768px){
     main{
         overflow: hidden;
     }
