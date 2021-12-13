@@ -4,7 +4,7 @@ var revealElements = document.getElementsByClassName("cardPic");
 		for (var i=0; i<revealElements.length; i++) { // create a scene for each element
 			new ScrollMagic.Scene({
 								triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
-								offset: 150, // start a little later
+								offset: 200, // start a little later
 								triggerHook: 0.5,
 							})
 							.setClassToggle(revealElements[i], "visible") // add class toggle
@@ -25,7 +25,7 @@ var revealElements = document.getElementsByClassName("cardPic");
 var tl = new TimelineMax();
 
 tl.add(
-	TweenMax.to('.heroImage', 1, { backgroundColor: "#2146ff", transformOrigin: "50%, 50%", ease:Power2.easeInOut})
+	TweenMax.to('.heroImage', 1, { backgroundColor: "#39C8ED", transformOrigin: "50%, 50%", ease:Power2.easeInOut})
 );
 
 tl.add(
@@ -39,7 +39,7 @@ tl.add(
 );
 
 tl.add(
-	TweenMax.to(".blueX svg text", 1, {scale: 0.1, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
+	TweenMax.to(".blueX svg text", 1, {scale: 0.1, transformOrigin: "50%, 47%", ease:Power2.easeInOut}),
 	"-=1"
 );
 

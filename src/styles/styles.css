@@ -31,10 +31,16 @@ html, body{
     font-family: "Days Sans Black";
     src: url("../assets/days_sans_black.otf") format("opentype");
 }
+@font-face {
+    font-family: "Katahdin Round";
+    src: url("../assets/KatahdinRound.otf") format("opentype");
+}
 
-.body{
+body{
     background-color: #fff;
     transition: all 1s ease-in;
+    max-width: 1920px;
+    margin: auto;
 }
 .logo{
     position: fixed;
@@ -70,10 +76,14 @@ html, body{
     grid-column: 2 /span 3;
     grid-row: 4;
     display: flex;
-    font-size: 40px;
+    font-size: 49px;
     color: #fff;
     align-items: center;
     justify-content: center;
+}
+
+.bottomText{
+    font-family: "Big Noodle Tilting";
 }
 
 .heroPic{
@@ -100,7 +110,7 @@ html, body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 25%);
+    transform: translate(-50%, 50%);
     z-index: 10;
     opacity: 0;
 }
@@ -117,7 +127,7 @@ html, body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 800px;
+    max-width: 1500px;
 }
 
 .blueX{
@@ -160,7 +170,7 @@ svg path {
     font-size: 300em;
     /* line-height: 1; */
     transform: translateY(-233%);
-    font-family: "Days Sans Black";
+    font-family: "Katahdin Round";
     
 }
 
@@ -195,7 +205,7 @@ svg text {
 
 .restart{
     text-align: center;
-    font-size: 100px;
+    font-size: 70px;
     color: #3E2FA1;
     font-family: "Big Noodle Tilting";
 }
@@ -204,6 +214,7 @@ svg text {
 .cards{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    height: 960px;
 }
 .leftText{
     grid-column: 1;
@@ -256,16 +267,16 @@ svg text {
     opacity: 0;
     height: auto;
     width: 100%;
-    -webkit-transform: translateX(-40px);
-			 -moz-transform: translateX(-40px);
-				-ms-transform: translateX(-40px);
-				 -o-transform: translateX(-40px);
-						transform: translateX(-40px);
-		-webkit-transition: all 0.6s ease-out;
-			 -moz-transition: all 0.6s ease-out;
-				-ms-transition: all 0.6s ease-out;
-				 -o-transition: all 0.6s ease-out;
-						transition: all 0.6s ease-out;
+    -webkit-transform: translateX(-120px);
+			 -moz-transform: translateX(-120px);
+				-ms-transform: translateX(-120px);
+				 -o-transform: translateX(-120px);
+						transform: translateX(-120px);
+		-webkit-transition: all 0.4s ease-out;
+			 -moz-transition: all 0.4s ease-out;
+				-ms-transition: all 0.4s ease-out;
+				 -o-transition: all 0.4s ease-out;
+						transition: all 0.4s ease-out;
 }
 .cardPic.visible{
     opacity: 1;
@@ -280,16 +291,17 @@ svg text {
     opacity: 0;
     height: auto;
     width: 100%;
-    -webkit-transform: translateX(40px);
-			 -moz-transform: translateX(40px);
-				-ms-transform: translateX(40px);
-				 -o-transform: translateX(40px);
-						transform: translateX(40px);
-		-webkit-transition: all 0.6s ease-out;
-			 -moz-transition: all 0.6s ease-out;
-				-ms-transition: all 0.6s ease-out;
-				 -o-transition: all 0.6s ease-out;
-						transition: all 0.6s ease-out;
+    -webkit-transform: translateX(120px);
+			 -moz-transform: translateX(412px);
+				-ms-transform: translateX(120px);
+				 -o-transform: translateX(120px);
+						transform: translateX(120px);
+		-webkit-transition: all 0.4s ease-out;
+			 -moz-transition: all 0.4s ease-out;
+				-ms-transition: all 0.4s ease-out;
+				 -o-transition: all 0.4s ease-out;
+						transition: all 0.4s ease-out;
+    padding-top: 6.56rem;
 }
 .cardPicLeft.visible{
     opacity: 1;
@@ -298,7 +310,7 @@ svg text {
 				-ms-transform: none;
 				 -o-transform: none;
 						transform: none;
-
+    padding-top: 6.56rem;
 }
 .picSlotLeft{
     grid-column: 1;
@@ -307,6 +319,10 @@ svg text {
 .rightText{
     grid-column: 2;
     background-color: #3E2FA1;
+}
+
+.animateWrapper{
+    padding-top: 1.68rem;
 }
 
 /*------------------- Bottom Section -------------------*/
@@ -375,7 +391,7 @@ svg text {
 } */
 
 /* ---------------------- MEDIA QUERIES ---------------------- */
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1441px){
     .textHolder{
         grid-column: 1 /span 5;
         align-items: center;
@@ -413,20 +429,33 @@ svg text {
     }
     .bottomHero{
         opacity: 1;
-        background-image: url("../images/textWallChange.png");
+        background-image: url("../images/textWall.png");
         background-repeat: no-repeat;
-        height: 1950px;
         width: auto;
         background-size: contain;
         transition: all 0.5s;
+        height: 2760px;
+
     }
     .bottomHeroTrans{
         opacity: 1;
         background-image: url("../images/textWallChange.png");
         background-repeat: no-repeat;
-        height: 1950px;
         width: auto;
         background-size: contain;
         transition: all 0.5s;
+        height: 2760px;
+    }
+    .cards{
+        height: 730px;
+    }
+    .cardPicLeft{
+        padding-top: 5rem;
+    }
+    .cardPicLeft.visible{
+        padding-top: 5rem;
+    }
+    .animateWrapper{
+        padding-top: 1.37rem;
     }
 }
