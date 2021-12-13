@@ -25,12 +25,27 @@ var revealElements = document.getElementsByClassName("cardPic");
 var tl = new TimelineMax();
 
 tl.add(
-	TweenMax.to('.heroImage', 1, {scale: 0.5, transformOrigin: "50%, 50%", ease:Power2.easeInOut})
+	TweenMax.to('.heroImage', 1, { backgroundColor: "#2146ff", transformOrigin: "50%, 50%", ease:Power2.easeInOut})
 );
 
 tl.add(
-	TweenMax.to(".blueX", 1, {scale: 0.25, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
+	TweenMax.to(".blueX svg", 1, {opacity: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
 	"-=1"
+);
+
+tl.add(
+	TweenMax.to(".heroImage .heroImageContainer", 1, {opacity: 0, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
+	"-=1"
+);
+
+tl.add(
+	TweenMax.to(".blueX svg text", 1, {scale: 0.1, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
+	"-=1"
+);
+
+tl.add(
+	TweenMax.to(".blueText", 1, {opacity: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
+	"+=1"
 );
 
 // const controller = new ScrollMagic.Controller();
