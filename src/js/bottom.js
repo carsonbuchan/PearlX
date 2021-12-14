@@ -5,11 +5,11 @@
             
                 if (scroll >= 7000) {
                     header.removeClass('bottomHero').addClass("bottomHeroTrans");
-                    $(".portraitX").attr("src","../images/childX.png");
+                    $(".portraitX").attr("src","../images/wideGirl.png");
                 } 
                 else{
                     
-                    $(".portraitX").attr("src","../images/manX.png");
+                    $(".portraitX").attr("src","../images/wideMan.png");
                 }
             });
         });

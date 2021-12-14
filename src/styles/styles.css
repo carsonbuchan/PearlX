@@ -368,12 +368,12 @@ svg text {
     transition: all 0.5s;
 }
 .portraitX{
-    width: auto;
+    width: 1920px;
     height: 100vh;
 }
 .portraitChildX{
-    width: auto;
-    height: 100vh;
+    width: 100%;
+    height: auto;
 }
 .sticky{
     position: sticky;
