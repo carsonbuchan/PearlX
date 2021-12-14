@@ -63,7 +63,8 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    max-width: 100%;
     position: relative;
     overflow: hidden;
 }
@@ -76,7 +77,7 @@ body{
     grid-column: 2 /span 3;
     grid-row: 4;
     display: flex;
-    font-size: 49px;
+    font-size: 80px;
     color: #fff;
     align-items: center;
     justify-content: center;
@@ -91,7 +92,7 @@ body{
 }
 .headerText{
     color: #fff;
-    font-family:"GT Super Display Bold";
+    font-family:"GT Super Text Bold";
 }
 .mainText{
     color: #fff;
@@ -108,18 +109,17 @@ body{
 
 .blueText{
     position: absolute;
-    top: 50%;
+    top: 100%;
     left: 50%;
     transform: translate(-50%, 50%);
     z-index: 10;
-    opacity: 0;
 }
 
 .heroImage {
     position: absolute;
-    top: 50%;
+    /* top: 50%; */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
 }
 
 .heroImage .textHolder {
@@ -127,7 +127,8 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 1500px;
+    width: 100%;
+    
 }
 
 .blueX{
@@ -147,7 +148,6 @@ body{
     left: 0; */
     /* width: 200%;
     height: 200%; */
-    position: relative;
     transform-origin: center center;
 }
 
@@ -157,6 +157,7 @@ svg {
 	overflow: visible;
 	display: block;
     opacity: 0;
+    transform-box: fill-box;
 }
 
 svg path {
@@ -170,38 +171,21 @@ svg path {
     font-size: 300em;
     /* line-height: 1; */
     transform: translateY(-233%);
+    transform-origin: center center;
     font-family: "Katahdin Round";
-    
 }
 
 .blueX svg mask rect {
-/*   fill: rgba(255, 255, 255, 0.8); */
   fill: white;
-  width: 100%;
-  height: 100%;
 }
 
-.blueX svg > rect {
+.blueX svg > .maskRect {
     fill: white;
     -webkit-mask: url(#mask);
     mask: url(#mask);
     width: 100%;
     height: 100%;
 }
-
-/* .blueX svg mask rect {
-      fill: white;
-    }
-
-.blueX svg > rect {
-    fill: white;
-    -webkit-mask: url(#mask);
-    mask: url(#mask);
-}
-
-svg text {
-    text-anchor: middle;
-} */
 
 .restart{
     text-align: center;
@@ -279,6 +263,9 @@ svg text {
 						transition: all 0.4s ease-out;
 }
 .cardPic.visible{
+    width: 85%;
+    padding-top: 7%;
+    padding-left: 7%;
     opacity: 1;
 		-webkit-transform: none;
 			 -moz-transform: none;
@@ -304,6 +291,9 @@ svg text {
     padding-top: 6.56rem;
 }
 .cardPicLeft.visible{
+    width: 85%;
+    margin-top: 6%;
+    padding-left: 7%;
     opacity: 1;
 		-webkit-transform: none;
 			 -moz-transform: none;
@@ -350,6 +340,7 @@ svg text {
 }
 
 .bottomHero{
+    position: relative;
     opacity: 1;
     background-image: url("../images/textWall.png");
     background-repeat: no-repeat;
@@ -368,7 +359,7 @@ svg text {
     transition: all 0.5s;
 }
 .portraitX{
-    width: 1920px;
+    width: auto;
     height: 100vh;
 }
 .portraitChildX{
@@ -383,6 +374,15 @@ svg text {
     align-items: center;
     justify-content: center;
 }
+.bot{
+    background-image: url(../images/textWallSm2.png);
+    height: 100%;
+}
+/* .bg-bot{
+    position: absolute;
+    max-width: 1920px;
+    top: 0;
+} */
 /* div#heroContainer > div{
     position: absolute;
     width: 100%;
@@ -454,14 +454,13 @@ svg text {
         width: 100%;
     }
     .cardPicLeft.visible{
-        width: 100%;
         padding-top: 5rem;
     }
     .animateWrapper{
         padding-top: 1.37rem;
     }
 }
-@media only screen and (max-width: 1300px){
+@media only screen and (max-width: 1360px){
     .textTitle{
         font-size: 35px;
     }
@@ -475,6 +474,9 @@ svg text {
     .cardBotText{
         font-size: 20px;
         margin-bottom: 0px;
+    }
+    .bottomHero{
+        height: 2450px;
     }
 }
 
@@ -533,3 +535,8 @@ svg text {
         height: 700px;
     }
 }
+@media only screen and (max-width: 1280px){.bottomHero{
+    height: 2450px;
+}}
+@media only screen and (max-width: 1600px){.bottomHero{
+    height: 3060px;

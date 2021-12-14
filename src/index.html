@@ -17,7 +17,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js" integrity="sha512-RvUydNGlqYJapy0t4AH8hDv/It+zKsv4wOQGb+iOnEfa6NnF2fzjXgRy+FDjSpMfC3sjokNUzsfYZaZ8QAwIxg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="js/modal.js"></script>
   </head>
 
   <body class="bg" style="overflow-x: hidden;">
@@ -32,16 +31,16 @@
       <!--------------------- First Section --------------------->
       <div class="topHero">
         <div class="blueX">
-          <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+          <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
             <defs>
               <!-- Mask -->
-              <mask id="mask" x="0" y="0" width="1920" height="1080">
+              <mask id="mask" x="0" y="0" width="1920" height="1080" >
                 <rect x="0" y="0" width="1920" height="1080"/>
                 <text x="960" y="1em">X</text>
               </mask>
             </defs>
-            <rect x="0" y="0" width="1920" height="1080"/>
-          </svg>        
+            <rect class="maskRect" x="0" y="0" width="1920" height="1080"/>
+          </svg>
         </div>
         <div class="blueText">
           <h1 class="restart" id="pin1">
@@ -154,9 +153,13 @@
     <div class="heroContainer">
         <div class="bottomHero">
             <div class="sticky">
-                <img src="images/wideMan.png" class="portraitX">  
-            </div>          
+                <img src="images/wideMan2.png" class="portraitX">  
+            </div>  
         </div>
+        <!-- <div class="spacer">   
+          <div class="bot">
+            </div>
+          </div> -->
         <!-- <div class="bottomHeroTrans">
             <div class="sticky">
                 <img src="images/childX.png" class="portraitChildX">
