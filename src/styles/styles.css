@@ -63,7 +63,8 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    max-width: 100%;
     position: relative;
     overflow: hidden;
 }
@@ -108,11 +109,10 @@ body{
 
 .blueText{
     position: absolute;
-    top: 50%;
+    top: 100%;
     left: 50%;
     transform: translate(-50%, 50%);
     z-index: 10;
-    opacity: 0;
 }
 
 .heroImage {
@@ -147,7 +147,6 @@ body{
     left: 0; */
     /* width: 200%;
     height: 200%; */
-    position: relative;
     transform-origin: center center;
 }
 
@@ -157,6 +156,7 @@ svg {
 	overflow: visible;
 	display: block;
     opacity: 0;
+    transform-box: fill-box;
 }
 
 svg path {
@@ -170,38 +170,21 @@ svg path {
     font-size: 300em;
     /* line-height: 1; */
     transform: translateY(-233%);
+    transform-origin: center center;
     font-family: "Katahdin Round";
-    
 }
 
 .blueX svg mask rect {
-/*   fill: rgba(255, 255, 255, 0.8); */
   fill: white;
-  width: 100%;
-  height: 100%;
 }
 
-.blueX svg > rect {
+.blueX svg > .maskRect {
     fill: white;
     -webkit-mask: url(#mask);
     mask: url(#mask);
     width: 100%;
     height: 100%;
 }
-
-/* .blueX svg mask rect {
-      fill: white;
-    }
-
-.blueX svg > rect {
-    fill: white;
-    -webkit-mask: url(#mask);
-    mask: url(#mask);
-}
-
-svg text {
-    text-anchor: middle;
-} */
 
 .restart{
     text-align: center;
