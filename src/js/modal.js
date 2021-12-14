@@ -63,8 +63,8 @@ new ScrollMagic.Scene({
 
 
 $(function (){
-	var scene = new ScrollMagic.Scene({triggerElement: "#help", triggerHook: "onLeave"})
-	.setPin("#help")
+	var scene = new ScrollMagic.Scene({triggerElement: "#drag", triggerHook: "onLeave"})
+	.setPin("#drag")
 	.addIndicators({name: "2 (duration: 0)"})
 	.addTo (controller);
 	var offset = scene.offset();

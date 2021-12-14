@@ -81,6 +81,7 @@ body{
     color: #fff;
     align-items: center;
     justify-content: center;
+    max-width: 1200px;
 }
 
 .bottomText{
@@ -207,6 +208,8 @@ svg path {
 .textTitle{
     font-size: 70px;
     font-family: "Big Noodle Tilting";
+    padding-top: 100px;
+    margin: 0;
 }
 .cardMidText{
     font-size: 40px;
@@ -338,17 +341,9 @@ svg path {
     background-size: cover;
     height: 150vh;
 }
-/* .heroContainer{
-    background-image: url("../images/textWall.png");
-    height: 100vh;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
 .bottomHero{
     position: relative;
     opacity: 1;
-    
     height: 100%;
     width: 100%;
     transition: all 0.5s;
@@ -372,16 +367,13 @@ svg path {
     width: 100%;
     height: auto;
 }
-.sticky{
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
+.portraitContainer{
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 3;
 }
-.please{
+.sticky{
     position: absolute;
     width: 100%;
     height: auto;
