@@ -61,7 +61,13 @@ new ScrollMagic.Scene({
 .setTween(tl)
 .addTo(controller);
 
-			// var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 300})
-			// 				.setPin("#pin1")
-			// 				.addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
-			// 				.addTo(controller);
+
+$(function (){
+	var scene = new ScrollMagic.Scene({triggerElement: "#help", triggerHook: "onLeave"})
+	.setPin("#help")
+	.addIndicators({name: "2 (duration: 0)"})
+	.addTo (controller);
+	var offset = scene.offset();
+	
+
+});
