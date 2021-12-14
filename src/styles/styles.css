@@ -127,7 +127,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
+    
     
 }
 
@@ -357,6 +357,7 @@ svg path {
     width: auto;
     background-size: contain;
     transition: all 0.5s;
+    object-fit: cover;
 }
 .portraitX{
     width: auto;
@@ -391,12 +392,26 @@ svg path {
 } */
 
 /* ---------------------- MEDIA QUERIES ---------------------- */
+@media only screen and (max-width: 1600px){.bottomHero{
+    height: 3070px;
+    
+}
+.bottomHeroTrans{
+    height: 3070px;
+}}
+@media only screen and (max-width: 1500px){.bottomHero{
+    height: 2880px;
+    
+}
+.bottomHeroTrans{
+    height: 2880px;
+}}
 @media only screen and (max-width: 1441px){
     .textHolder{
         grid-column: 1 /span 5;
         align-items: center;
         padding-bottom: 50px;
-        font-size: 30px;
+        font-size: 80px;
     }
     .headerText{
         color: #fff;
@@ -535,8 +550,27 @@ svg path {
         height: 700px;
     }
 }
+@media only screen and (max-width: 1400px){.bottomHero{
+    height: 2700px;
+    
+}
+.bottomHeroTrans{
+    height: 2700px;
+}}
 @media only screen and (max-width: 1280px){.bottomHero{
     height: 2450px;
+    
+}
+.bottomHeroTrans{
+    height: 2450px;
 }}
-@media only screen and (max-width: 1600px){.bottomHero{
+
+
+
+
+/* @media only screen and (max-width: 1600px){.bottomHero{
     height: 3060px;
+}
+.bottomHeroTrans{
+    height: 3060px;
+}} */
