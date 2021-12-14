@@ -44,8 +44,8 @@ tl.add(
 );
 
 tl.add(
-	TweenMax.to(".blueText", 1, {opacity: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
-	"+=0.3"
+	TweenMax.to(".blueText", 1, {top: "50%", transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
+	"+=0.1"
 );
 
 // const controller = new ScrollMagic.Controller();
