@@ -1,25 +1,26 @@
+
 var controller = new ScrollMagic.Controller();
 
-var revealElements = document.getElementsByClassName("cardPic");
-		for (var i=0; i<revealElements.length; i++) { // create a scene for each element
-			new ScrollMagic.Scene({
-								triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
-								offset: 200, // start a little later
-								triggerHook: 0.5,
-							})
-							.setClassToggle(revealElements[i], "visible") // add class toggle
-							.addTo(controller);
-		}
-		var revealElements = document.getElementsByClassName("cardPicLeft");
-		for (var i=0; i<revealElements.length; i++) { // create a scene for each element
-			new ScrollMagic.Scene({
-								triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
-								offset: 200, // start a little later
-								triggerHook: 0.5,
-							})
-							.setClassToggle(revealElements[i], "visible") // add class toggle
-							.addTo(controller);
-		}
+// var revealElements = document.getElementsByClassName("cardPic");
+// 		for (var i=0; i<revealElements.length; i++) { // create a scene for each element
+// 			new ScrollMagic.Scene({
+// 								triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
+// 								offset: 200, // start a little later
+// 								triggerHook: 0.5,
+// 							})
+// 							.setClassToggle(revealElements[i], "visible") // add class toggle
+// 							.addTo(controller);
+// 		}
+// 		var revealElements = document.getElementsByClassName("cardPicLeft");
+// 		for (var i=0; i<revealElements.length; i++) { // create a scene for each element
+// 			new ScrollMagic.Scene({
+// 								triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
+// 								offset: 200, // start a little later
+// 								triggerHook: 0.5,
+// 							})
+// 							.setClassToggle(revealElements[i], "visible") // add class toggle
+// 							.addTo(controller);
+// 		}
 
 
 var tl = new TimelineMax();
@@ -48,6 +49,9 @@ tl.add(
 	"+=0.1"
 );
 
+
+
+// picture swap
 // const controller = new ScrollMagic.Controller();
 var startpin = new ScrollMagic.Scene({
 	duration: 800
@@ -61,13 +65,46 @@ new ScrollMagic.Scene({
 .setTween(tl)
 .addTo(controller);
 
-
-$(function (){
-	var scene = new ScrollMagic.Scene({triggerElement: "#help", triggerHook: "onLeave"})
-	.setPin("#help")
-	.addIndicators({name: "2 (duration: 0)"})
-	.addTo (controller);
-	var offset = scene.offset();
+if (window.innerWidth > 768) {
+	$(function (){
+		var scene = new ScrollMagic.Scene({triggerElement: "#drag", triggerHook: "onLeave"})
+		.setPin("#drag")
+		.addIndicators({name: "2 (duration: 0)"})
+		.addTo (controller);
+		var offset = scene.offset();
+		
 	
-
-});
+	});
+	
+	// define images
+	var images = [
+		"../images/wideMan2.png",
+		"../images/wideGirl2.png",
+		
+	];
+	
+	// TweenMax can tween any property of any object. We use this object to cycle through the array
+	var obj = {curImg: 0};
+	
+	// create tween
+	var tween = TweenMax.to(obj, 1,
+		{
+			curImg: images.length - 1,	// animate propery curImg to number of images
+			roundProps: "curImg",				// only integers so it can be used as an array index							// repeat 3 times
+			immediateRender: true,			// load first image automatically
+			ease: Linear.easeNone,			// show every image the same ammount of time
+			onUpdate: function () {
+			  $(".portraitX").attr("src", images[obj.curImg]); // set the image source
+			}
+		}
+	);
+	
+	
+	
+	// build scene
+	var scene = new ScrollMagic.Scene({triggerElement: ".portraitContainer", offset: 1700})
+					.setTween(tween)
+					.addIndicators() // add indicators (requires plugin)
+					.addTo(controller);
+					
+  }

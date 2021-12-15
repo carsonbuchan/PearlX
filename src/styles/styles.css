@@ -81,22 +81,19 @@ body{
     color: #fff;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .bottomText{
     font-family: "Big Noodle Tilting";
 }
 
-.heroPic{
-    
-}
 .headerText{
     color: #fff;
     font-family:"GT Super Text Bold";
 }
 .mainText{
     color: #fff;
-    padding-left: 100px;
     padding-right: 100px;
     font-family:"GT America Standard Light";
 }
@@ -203,10 +200,20 @@ svg path {
 .leftText{
     grid-column: 1;
     background-color: #3E2FA1;
+    padding-left: 100px;
+}
+.topHolder{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding-top: 100px;
 }
 .textTitle{
     font-size: 70px;
     font-family: "Big Noodle Tilting";
+    padding-left: 20px;
+    margin: 0;
+    color: #fff;
 }
 .cardMidText{
     font-size: 40px;
@@ -229,17 +236,15 @@ svg path {
     background-color: black;
     background-size: cover;
 }
-.drillHolder{
-    
-}
+
 .picSlotBot{
     background-image: url(../videos/zoomLight.gif);
     background-repeat: no-repeat;
     background-color: black;
-    background-size: contain;
+    background-size: cover;
 }
 /* Card image slide */
-.overlay{
+/* .overlay{
     grid-column: 2;
     width: 100%;
     object-fit: cover;
@@ -272,9 +277,9 @@ svg path {
 				-ms-transform: none;
 				 -o-transform: none;
 						transform: none;
-}
+} */
 
-.cardPicLeft{
+/* .cardPicLeft{
     opacity: 0;
     height: auto;
     width: 100%;
@@ -301,7 +306,7 @@ svg path {
 				 -o-transform: none;
 						transform: none;
     padding-top: 6.56rem;
-}
+} */
 .picSlotLeft{
     grid-column: 1;
     background-color: #000;
@@ -309,6 +314,7 @@ svg path {
 .rightText{
     grid-column: 2;
     background-color: #3E2FA1;
+    padding-left: 100px;
 }
 
 .animateWrapper{
@@ -338,17 +344,9 @@ svg path {
     background-size: cover;
     height: 150vh;
 }
-/* .heroContainer{
-    background-image: url("../images/textWall.png");
-    height: 100vh;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
 .bottomHero{
     position: relative;
     opacity: 1;
-    
     height: 100%;
     width: 100%;
     transition: all 0.5s;
@@ -368,31 +366,58 @@ svg path {
     height: 100vh;
     z-index: 3;
 }
+.portraitXswap{
+    width: auto;
+    height: 100vh;
+    z-index: 3;
+    opacity: 0;
+}
 .portraitChildX{
     width: 100%;
     height: auto;
 }
-.sticky{
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
+.portraitContainer{
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 3;
 }
-.please{
+.sticky{
     position: absolute;
     width: 100%;
     height: auto;
     top: 0;
+    transition: 0.5s;
+}
+.stickyChange{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    transition: 0.5s;
+    opacity: 0;
 }
 .bot{
     background-image: url(../images/textWallSm2.png);
     height: 100%;
 }
+.mobileX{
+    display: none;
+    width: auto;
+    z-index: 3;
+}
+.mobileX720{
+    display: none;
+    width: auto;
+    z-index: 3;
+}
 /* ---------------------- MEDIA QUERIES ---------------------- */
-@media only screen and (max-width: 1441px){
+@media only screen and (max-width: 1919px){
+   .textHolder{
+       max-width: 1200px;
+   } 
+}
+@media only screen and (max-width: 1440px){
     .textHolder{
         grid-column: 1 /span 5;
         align-items: center;
@@ -413,7 +438,7 @@ svg path {
     }
     
     .mainText{
-        padding-left: 50px;
+        padding-left: 0px;
         padding-right: 50px;
     }
     .cardMidText{
@@ -461,7 +486,7 @@ svg path {
         font-size: 35px;
     }
     .mainText{
-        padding-left: 50px;
+        padding-left: 0px;
         padding-right: 50px;
     }
     .cardMidText{
@@ -472,13 +497,19 @@ svg path {
         margin-bottom: 0px;
     }
 }
-
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1280px){
+    .mainText{
+        padding-left: 0px;
+        padding-right: 50px;
+    }
+}
+@media only screen and (max-width: 720px){
     main{
         overflow: hidden;
     }
     .heroImage .textHolder{
         max-width: 300px;
+        font-size: 30px;
     }
     .blueText{
         transform: translate(-50%, 10%);
@@ -491,7 +522,17 @@ svg path {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 1fr);
     }
-    
+    .leftText{
+        padding-bottom: 20px;
+        padding-left: 0px;
+    }
+    .textTitle{
+        padding-left: 10px;
+    }
+    .topHolder{
+        padding-left: 50px;
+        padding-top: 20px;
+    }
     .leftText{
         grid-column: 1;
     }
@@ -501,6 +542,10 @@ svg path {
     .cardBotText{
         font-size: 15px;
         padding-bottom: 10px;
+    }
+    .mainText{
+        padding-left: 50px;
+        padding-right: 50px;
     }
     .picSlot{
         grid-column: 1;
@@ -517,9 +562,123 @@ svg path {
     }
     .rightText{
         grid-column: 1;
+        padding-bottom: 20px;
+        padding-left: 0px;
     }
     .bottomText{
         text-align: center;
+    }
+    .bottomText{
+        font-size: 60px;
+    }
+    .heroContainer{
+        height: 1350px;
+    }
+    .portraitX{
+        display: none;
+    }
+    .mobileX720{
+        display: block;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+    .sticky{
+        display: none;
+    }
+    .stickyChange{
+        opacity: 1;
+    }
+}
+@media only screen and (max-width: 428px){
+    main{
+        overflow: hidden;
+    }
+    .heroImage .textHolder{
+        max-width: 300px;
+        font-size: 30px;
+    }
+    .blueText{
+        transform: translate(-50%, 10%);
+    }
+    .visible{
+        display: none;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .leftText{
+        padding-bottom: 20px;
+        padding-left: 0px;
+    }
+    .textTitle{
+        padding-left: 10px;
+    }
+    .topHolder{
+        padding-left: 50px;
+        padding-top: 20px;
+    }
+    .leftText{
+        grid-column: 1;
+    }
+    .cardMidText{
+        font-size: 18px;
+    }
+    .cardBotText{
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+    .mainText{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .picSlot{
+        grid-column: 1;
+        width: 100vw;
+        background-size: cover;
+    }
+    .picSlotLeft{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .cardPicLeft{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .rightText{
+        grid-column: 1;
+        padding-bottom: 20px;
+        padding-left: 0px;
+    }
+    .bottomText{
+        text-align: center;
+    }
+    .bottomText{
+        font-size: 60px;
+    }
+    .heroContainer{
+        height: 825px;
+    }
+    .portraitX{
+        display: none;
+    }
+    .mobileX{
+        display: block;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+    .sticky{
+        display: none;
+    }
+    .stickyChange{
+        opacity: 1;
     }
 }
 
