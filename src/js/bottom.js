@@ -64,4 +64,5 @@ if (window.innerWidth > 768) {
     .setTween (".sticky", {opacity: 0})
     .reverse(false)
     .addTo (controller);
+    }
   }

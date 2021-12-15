@@ -382,20 +382,12 @@ svg path {
     justify-content: center;
     z-index: 3;
 }
-.sticky{
-    position: absolute;
-    width: 100%;
-    height: auto;
-    top: 0;
-    transition: 0.5s;
-}
+
 .stickyChange{
     position: absolute;
     width: 100%;
     height: auto;
     top: 0;
-    transition: 0.5s;
-    opacity: 0;
 }
 .bot{
     background-image: url(../images/textWallSm2.png);
@@ -577,11 +569,13 @@ svg path {
     .portraitX{
         display: none;
     }
-    .mobileX720{
+    .mobileX{
         display: block;
         z-index: 3;
         top: 50%;
         left: 50%;
+        height: 100%;
+        width: auto;
         position: absolute;
         transform: translate(-50%, -50%);
     }
@@ -590,6 +584,9 @@ svg path {
     }
     .stickyChange{
         opacity: 1;
+    }
+    .bottom{
+        height: auto;
     }
 }
 @media only screen and (max-width: 428px){
@@ -671,14 +668,19 @@ svg path {
         z-index: 3;
         top: 50%;
         left: 50%;
+        height: 100%;
+        width: auto;
         position: absolute;
         transform: translate(-50%, -50%);
     }
-    .sticky{
+    .mobileX720{
         display: none;
     }
-    .stickyChange{
-        opacity: 1;
+}
+
+@media only screen and (max-width: 428px){
+    .heroContainer{
+        height: 720px;
     }
 }
 
