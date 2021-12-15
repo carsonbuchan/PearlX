@@ -50,17 +50,18 @@
 // 								.setTween(tween)
 // 								.addIndicators() // add indicators (requires plugin)
 // 								.addTo(controller);
-
-var scene = new ScrollMagic.Scene({
-    triggerElement: ".bottomHero", offset: 1600
-})
-.setTween (".stickyChange", {opacity: 1})
-.reverse(false)
-.addTo (controller);
-
-var scene = new ScrollMagic.Scene({
-    triggerElement: ".bottomHero", offset: 1600
-})
-.setTween (".sticky", {opacity: 0})
-.reverse(false)
-.addTo (controller);
+if (window.innerWidth > 768) {
+    var scene = new ScrollMagic.Scene({
+        triggerElement: ".bottomHero", offset: 1700
+    })
+    .setTween (".stickyChange", {opacity: 1})
+    .reverse(false)
+    .addTo (controller);
+    
+    var scene = new ScrollMagic.Scene({
+        triggerElement: ".bottomHero", offset: 1700
+    })
+    .setTween (".sticky", {opacity: 0})
+    .reverse(false)
+    .addTo (controller);
+  }
