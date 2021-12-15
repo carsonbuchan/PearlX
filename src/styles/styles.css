@@ -81,7 +81,7 @@ body{
     color: #fff;
     align-items: center;
     justify-content: center;
-    max-width: 1200px;
+    width: 100%;
 }
 
 .bottomText{
@@ -363,6 +363,12 @@ svg path {
     height: 100vh;
     z-index: 3;
 }
+.portraitXswap{
+    width: auto;
+    height: 100vh;
+    z-index: 3;
+    opacity: 0;
+}
 .portraitChildX{
     width: 100%;
     height: auto;
@@ -378,12 +384,26 @@ svg path {
     width: 100%;
     height: auto;
     top: 0;
+    transition: 0.5s;
+}
+.stickyChange{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    transition: 0.5s;
+    opacity: 0;
 }
 .bot{
     background-image: url(../images/textWallSm2.png);
     height: 100%;
 }
 /* ---------------------- MEDIA QUERIES ---------------------- */
+@media only screen and (max-width: 1919px){
+   .textHolder{
+       max-width: 1200px;
+   } 
+}
 @media only screen and (max-width: 1441px){
     .textHolder{
         grid-column: 1 /span 5;
