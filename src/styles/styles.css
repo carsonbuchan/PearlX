@@ -47,6 +47,7 @@ body{
     margin-top: 45px;
     margin-left: 57px;
     z-index: 3000;
+    filter: drop-shadow(0 0 0.1rem #d3d3d3);
 }
 .main{
     max-width: 2000px;
@@ -188,7 +189,7 @@ svg path {
 }
 .restart{
     text-align: center;
-    font-size: 70px;
+    font-size: 100px;
     color: #3E2FA1;
     font-family: "Big Noodle Tilting";
 }
@@ -421,6 +422,7 @@ svg path {
     .headerText{
         color: #fff;
         font-family:"GT Super Display Bold";
+        text-align: center;
     }
     .titleText{
         font-size: 80px;
@@ -452,6 +454,7 @@ svg path {
         background-size: contain;
         transition: all 0.5s;
     }
+    .bottomText{}
     .bottomHeroTrans{
         opacity: 1;
         background-repeat: no-repeat;
@@ -501,6 +504,13 @@ svg path {
     main{
         overflow: hidden;
     }
+    .restart{
+        display: none;
+    }
+
+    .topHero{
+        display: none;
+    }
     .logo{
         left: 50%;
         transform: translateX(-50%);
@@ -513,8 +523,23 @@ svg path {
     .blueText{
         transform: translate(-50%, 10%);
     }
+    .titleText{
+        font-size: 70px;
+    }
+    .restartMobile{
+        text-align: center;
+        font-size: 70px;
+        color: #3E2FA1;
+        font-family: "Big Noodle Tilting";
+    }
     .mobileHero{
         display: block;
+    }
+    .background{
+        background-image: url("../images/group.png");
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-position: center;
     }
     .blueXMobile{
         display: flex;
@@ -608,6 +633,18 @@ svg path {
 @media only screen and (max-width: 428px){
     main{
         overflow: hidden;
+    }
+    .mobileHero{
+        display: block;
+    }
+    .blueXMobile{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .XMobile{
+        height: 50%;
+        width: 50%;
     }
     .heroImage .textHolder{
         max-width: 300px;

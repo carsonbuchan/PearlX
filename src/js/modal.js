@@ -103,7 +103,7 @@ if (window.innerWidth > 768) {
 	
 	
 	// build scene
-	var scene = new ScrollMagic.Scene({triggerElement: ".portraitContainer", offset: 200})
+	var scene = new ScrollMagic.Scene({triggerElement: ".portraitContainer", offset: 1000})
 					.setTween(tween)
 					
 					.addTo(controller);			
