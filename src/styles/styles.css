@@ -59,8 +59,8 @@ body{
 }
 
 .topHero{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    justify-content: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -111,6 +111,7 @@ body{
     left: 50%;
     transform: translate(-50%, 50%);
     z-index: 10;
+    width: fit-content;
 }
 
 .heroImage {
@@ -147,6 +148,10 @@ body{
     /* width: 200%;
     height: 200%; */
     transform-origin: center center;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    margin-top: -2px;
+    margin-left: -2px;
 }
 
 svg {
