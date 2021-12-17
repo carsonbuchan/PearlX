@@ -43,7 +43,7 @@
 // 					}
 // 				);
 				
-				var controller = new ScrollMagic.Controller();
+var controller = new ScrollMagic.Controller();
 				
 // 				// build scene
 // 				var scene = new ScrollMagic.Scene({triggerElement: ".portraitContainer", offset: 2000})
@@ -52,14 +52,14 @@
 // 								.addTo(controller);
 if (window.innerWidth > 768) {
     var scene = new ScrollMagic.Scene({
-        triggerElement: ".bottomHero", offset: 1700
+        triggerElement: ".bottomHero", offset: 2000
     })
     .setTween (".stickyChange", {opacity: 1})
     .reverse(false)
     .addTo (controller);
     
     var scene = new ScrollMagic.Scene({
-        triggerElement: ".bottomHero", offset: 1700
+        triggerElement: ".bottomHero", offset: 2000
     })
     .setTween (".sticky", {opacity: 0})
     .reverse(false)

@@ -23,53 +23,54 @@ var controller = new ScrollMagic.Controller();
 // 		}
 
 
-var tl = new TimelineMax();
 
-tl.add(
-	TweenMax.to('.heroImage', 1, { backgroundColor: "#39C8ED", transformOrigin: "50%, 50%", ease:Power2.easeInOut})
-);
-
-tl.add(
-	TweenMax.to(".blueX svg", 1, {opacity: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
-	"-=0.3"
-);
-
-tl.add(
-	TweenMax.to(".heroImage .heroImageContainer", 1, {opacity: 0, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
-	"-=0.3"
-);
-
-tl.add(
-	TweenMax.to(".blueX svg text", 1, {scale: 0.1, transformOrigin: "50%, 47%", ease:Power2.easeInOut}),
-	"-=0.3"
-);
-
-tl.add(
-	TweenMax.to(".blueText", 1, {top: "50%", transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
-	"+=0.1"
-);
-
-
-
-// picture swap
-// const controller = new ScrollMagic.Controller();
-var startpin = new ScrollMagic.Scene({
-	duration: 800
-})
-.setPin(".topHero")
-.addTo(controller);
-
-new ScrollMagic.Scene({
-	duration: 800
-})
-.setTween(tl)
-.addTo(controller);
 
 if (window.innerWidth > 768) {
+	var tl = new TimelineMax();
+
+	tl.add(
+		TweenMax.to('.heroImage', 1, { backgroundColor: "#39C8ED", transformOrigin: "50%, 50%", ease:Power2.easeInOut})
+	);
+	
+	tl.add(
+		TweenMax.to(".blueX svg", 1, {opacity: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
+		"-=0.3"
+	);
+	
+	tl.add(
+		TweenMax.to(".heroImage .heroImageContainer", 1, {opacity: 0, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
+		"-=0.3"
+	);
+	
+	tl.add(
+		TweenMax.to(".blueX svg text", 1, {scale: 0.1, transformOrigin: "50%, 47%", ease:Power2.easeInOut}),
+		"-=0.3"
+	);
+	
+	tl.add(
+		TweenMax.to(".blueText", 1, {top: "50%", transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
+		"+=0.1"
+	);
+	
+	
+	// const controller = new ScrollMagic.Controller();
+	var startpin = new ScrollMagic.Scene({
+		duration: 800
+	})
+	.setPin(".topHero")
+	.addTo(controller);
+	
+	new ScrollMagic.Scene({
+		duration: 800
+	})
+	.setTween(tl)
+	.addTo(controller);
+
+	//picture Swap/pull
 	$(function (){
 		var scene = new ScrollMagic.Scene({triggerElement: "#drag", triggerHook: "onLeave"})
 		.setPin("#drag")
-		.addIndicators({name: "2 (duration: 0)"})
+		
 		.addTo (controller);
 		var offset = scene.offset();
 		
@@ -102,9 +103,9 @@ if (window.innerWidth > 768) {
 	
 	
 	// build scene
-	var scene = new ScrollMagic.Scene({triggerElement: ".portraitContainer", offset: 300})
+	var scene = new ScrollMagic.Scene({triggerElement: ".portraitContainer", offset: 1000})
 					.setTween(tween)
-					.addIndicators() // add indicators (requires plugin)
+					
 					.addTo(controller);			
   } else{	
 	// define images
@@ -132,8 +133,8 @@ if (window.innerWidth > 768) {
 	
 	
 	// build scene
-	var scene = new ScrollMagic.Scene({triggerElement: ".portraitContainer", offset: 300})
+	var scene = new ScrollMagic.Scene({triggerElement: ".portraitContainer", offset: 200})
 					.setTween(tween)
-					.addIndicators() // add indicators (requires plugin)
+					
 					.addTo(controller);
   }
