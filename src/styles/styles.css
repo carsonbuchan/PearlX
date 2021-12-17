@@ -166,9 +166,7 @@ svg path {
 
 .blueX svg text {
     text-anchor: middle;
-    font-size: 300em;
-    /* line-height: 1; */
-    transform: translateY(-233%);
+    font-size: 50em;
     transform-origin: center center;
     font-family: "Katahdin Round";
 }

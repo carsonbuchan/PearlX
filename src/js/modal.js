@@ -29,22 +29,29 @@ if (window.innerWidth > 768) {
 	var tl = new TimelineMax();
 
 	tl.add(
-		TweenMax.to('.heroImage', 1, { backgroundColor: "#39C8ED", transformOrigin: "50%, 50%", ease:Power2.easeInOut})
-	);
-	
-	tl.add(
 		TweenMax.to(".blueX svg", 1, {opacity: 1, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
-		"-=0.3"
-	);
-	
+		// "-=0.3"
+		);
+		
 	tl.add(
 		TweenMax.to(".heroImage .heroImageContainer", 1, {opacity: 0, transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
-		"-=0.3"
-	);
+		// "-=0.3"
+		);
+			
+	tl.add(
+		TweenMax.to(".blueX", 1, {scale: 0.5, transformOrigin: "50%, 47%", ease:Power2.easeInOut}),
+		// "-=0.3"
+		);
+	
+		
+	tl.add(
+		TweenMax.to('.blueX', 1, { backgroundColor: "#39C8ED", transformOrigin: "50%, 50%", ease:Power2.easeInOut}),
+		"-=2"
+		);
 	
 	tl.add(
-		TweenMax.to(".blueX svg text", 1, {scale: 0.1, transformOrigin: "50%, 47%", ease:Power2.easeInOut}),
-		"-=0.3"
+		TweenMax.from(".blueX svg text", 1, {scale: 3, transformOrigin: "50%, 47%", ease:Power2.easeInOut}),
+		"-=2"
 	);
 	
 	tl.add(
